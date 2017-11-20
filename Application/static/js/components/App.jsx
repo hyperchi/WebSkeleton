@@ -1,10 +1,9 @@
 import React from 'react'
-import MainBody from './MainBody'
+import Main from './Main'
 
 const App = () => (
-  <div>
-    <MainBody />
-  </div>
-)
-
+    <div>
+        <Main />
+    </div>
+);
 export default App
