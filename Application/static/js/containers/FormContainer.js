@@ -97,7 +97,17 @@ class FormContainer extends Component {
         };
 
         console.log('Send this in a POST request:', formPayload);
+
+        fetch('https://mywebsite.com/endpoint/', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formPayload)
+        });
         this.handleClearForm(e);
+
     }
     render() {
         return (

@@ -1,8 +1,8 @@
 import React from 'react'
-
+import FormContainer from '../containers/FormContainer'
 const Portal = () => (
     <div>
-        <label> this is a label</label>
+        <FormContainer />
     </div>
 );
 
