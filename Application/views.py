@@ -16,6 +16,7 @@ def show_index_page():
 
 @app.route("/car", methods = ["GET", "POST", "PUT"])
 def show_car_page():
+    print("in car")
     result = "WRONG RESPONSE"
     print(request.method)
     if request.method == "GET":
@@ -61,6 +62,32 @@ def show_user_page():
             result = controller.create_new_user(data=data)
             return result
     return result
+
+@app.route("/test",  methods = ["GET", "POST", "PUT"])
+def test():
+    # result = "WRONG USER."
+    # if request.method == "GET":
+    #     print("GETTING user information.")
+    #     if "verify_login" in request.args:
+    #         data = request.args["verify_login"]
+    #         if not isinstance(data, dict):
+    #             data = json.loads(data)
+    #         print("Getting information on data:", data)
+    #         result = controller.verify_login(data=data)
+    #         return result
+    #
+    #     if "retrieve_password" in request.args:
+    #         data = request.args["retrieve_password"]
+    #         if not isinstance(data, dict):
+    #             data = json.loads(data)
+    #         result = controller.retrieve_password(data=data)
+    #         return result
+    #
+    if request.method == "POST":
+        print("post")
+        print(request.data)
+    return "{}"
+    # return result
 
 @app.route("/portal", methods=["GET", "POST", "PUT"])
 def portal():
